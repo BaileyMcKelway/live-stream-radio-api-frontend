@@ -1,0 +1,42 @@
+#stream_status {
+  margin-right: 5px;
+  flex: 1 auto;
+  max-width: 200px;
+  max-height: 50px;
+}
+
+.btn-deep-purple {
+  color: #efeff1;
+  background: linear-gradient(
+    90deg,
+    rgba(89, 46, 148, 1) 29%,
+    rgba(95, 63, 143, 1) 61%,
+    rgba(67, 22, 122, 1) 84%
+  );
+  background-size: 400%;
+}
+
+button:hover {
+  animation: animate 8s linear infinite;
+  color: rgba(145, 92, 182, 0.4);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+}
+
+.btn-sm {
+  height: 15%;
+  width: 25%;
+}
+
+.status-action {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.current-status {
+  display: flex;
+  justify-content: center;
+}
+
+.box-content {
+  margin-bottom: 15px;
+}

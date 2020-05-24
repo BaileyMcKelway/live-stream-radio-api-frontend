@@ -1,0 +1,52 @@
+{
+  "name": "simple-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./server",
+    "serve-dev": "nodemon --watch server --ignore server/public ./server",
+    "webpack": "webpack",
+    "webpack-dev": "npm run webpack -- --mode=development --watch",
+    "start-dev": "npm run webpack-dev & npm run serve-dev"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "stage-2"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "axios": "^0.18.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "css-loader": "^2.1.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "pg": "^7.8.2",
+    "react": "^16.8.3",
+    "react-background-animation": "^1.0.1",
+    "react-dom": "^16.8.3",
+    "react-player": "^1.15.3",
+    "react-redux": "^6.0.1",
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "request": "^2.88.2",
+    "sequelize": "^4.43.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

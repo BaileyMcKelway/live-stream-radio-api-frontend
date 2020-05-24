@@ -1,0 +1,13 @@
+#top {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+#middle {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
