@@ -1,0 +1,7 @@
+body {
+  background-image: url('/frontendAPI.jpg');
+  background-size: contain;
+  background-position: center;
+  background: cover;
+  background-color: #cccccc;
+}

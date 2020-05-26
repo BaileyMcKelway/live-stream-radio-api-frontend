@@ -1,0 +1,8 @@
+#controls_video {
+  display: flex;
+  justify-content: space-between;
+}
+
+#handle {
+  align-self: flex-end;
+}

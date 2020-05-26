@@ -6,14 +6,10 @@
 }
 
 .btn-deep-purple {
+  margin-top: 10px;
   color: #efeff1;
-  background: linear-gradient(
-    90deg,
-    rgba(89, 46, 148, 1) 29%,
-    rgba(95, 63, 143, 1) 61%,
-    rgba(67, 22, 122, 1) 84%
-  );
-  background-size: 400%;
+  border: solid;
+  border-width: 2px;
 }
 
 button:hover {

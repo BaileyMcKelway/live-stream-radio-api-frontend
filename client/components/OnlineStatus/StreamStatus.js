@@ -5,7 +5,7 @@ import { OnlineSign } from './OnlineSign';
 import { OfflineSign } from './OfflineSign';
 import { Starting } from './Starting';
 
-import { buildFetchStatusThunk } from '../store';
+import { buildFetchStatusThunk } from '../../store';
 
 import './StreamStatus.css';
 export class DisconnectedStreamStatus extends Component {

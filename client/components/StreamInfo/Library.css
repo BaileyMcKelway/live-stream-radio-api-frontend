@@ -2,4 +2,6 @@
   margin-left: 5px;
   margin-bottom: 20px;
   flex: 0 auto;
+  position: absolute;
+  bottom: 0;
 }
