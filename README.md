@@ -10,4 +10,4 @@ npm install
 npm start
 ```
 
-![alt text](https://imgur.com/a3qwNlK)
+![alt text](https://i.imgur.com/a3qwNlK.jpg)
