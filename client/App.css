@@ -20,12 +20,9 @@ body {
   border-radius: 5px;
   overflow: hidden;
   margin: 0px 0px 8px 0px;
-  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); */
-  /* background-color: #0f0f11; */
 }
 
 .box-header {
-  /* background-color: #aa6fff; */
   color: #efeff1;
   margin: 0px;
   padding-left: 10px;

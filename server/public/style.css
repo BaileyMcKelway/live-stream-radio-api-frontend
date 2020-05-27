@@ -1,6 +1,7 @@
 body {
-  background-image: url('/frontendAPI.jpg');
+  background-image: url('/image/frontendAPI.jpg');
   background-size: contain;
+  -webkit-background-size: cover;
   background-position: center;
   background: cover;
   background-color: #cccccc;
