@@ -9,7 +9,7 @@
     "webpack": "webpack",
     "webpack-dev": "npm run webpack -- --mode=development --watch",
     "start-dev": "npm run webpack-dev & npm run serve-dev",
-    "start": "npm run webpack-dev & npm run serve"
+    "start": "npm run webpack-dev & npm run serve-dev"
   },
   "babel": {
     "presets": [
