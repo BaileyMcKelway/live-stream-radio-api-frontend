@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ChangeEvent } from 'react';
 import { connect } from 'react-redux';
 import {
   buildFetchStatusThunk,
@@ -9,11 +9,22 @@ import {
 import { StreamStatus } from './OnlineStatus/StreamStatus';
 import { StreamInformation } from './StreamInfo/StreamInformation';
 import { Library } from './StreamInfo/Library';
-import VideoPlayer from './Video/Chat/VideoPlayer.js';
-import { Chat } from './Video/Chat/Chat.js';
+import VideoPlayer from './Video/Chat/VideoPlayer.jsx';
+import { Chat } from './Video/Chat/Chat.jsx';
+
+type MainState = {
+  video: boolean;
+  chat: boolean;
+};
+
+type MainProps = {
+  fetchStatus: any;
+  fetchLibrary: any;
+  fetchConfig: any;
+};
 
 import './Main.css';
-export class DisconnectedMain extends Component {
+export class DisconnectedMain extends Component<MainProps, MainState> {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +38,7 @@ export class DisconnectedMain extends Component {
     this.props.fetchLibrary();
     this.props.fetchConfig();
   }
-  handleChange(event) {
+  handleChange(event: any) {
     this.setState({ [event.target.name]: event.target.value });
   }
   render() {

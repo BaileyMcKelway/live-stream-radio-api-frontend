@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+type LibraryProps = {
+  library: string[];
+};
+
 import './Library.css';
-export const DisconnectedLibrary = (props) => {
-  const library = props.library;
+export const DisconnectedLibrary: React.FC<LibraryProps> = ({ library }) => {
   return (
     <div id="library">
       {library.length <= 0 ? (

@@ -1,9 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+type StreamInformationProps = {
+  config: any;
+};
+
 import './StreamInformation.css';
-export const DisconnectedStreamInformation = (props) => {
-  const config = props.config;
+export const DisconnectedStreamInformation: React.FC<StreamInformationProps> = ({
+  config,
+}) => {
   return (
     <div id="stream_information">
       <div className="box">

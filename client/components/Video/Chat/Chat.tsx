@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
 
+type LibraryProps = {
+  chat: boolean;
+};
+
 import './Chat.css';
-export const Chat = (props) => {
-  const [hidden, setHidden] = useState(!props.chat);
+export const Chat: React.FC<LibraryProps> = ({ chat }) => {
+  const [hidden, setHidden] = useState(!chat);
   const config = require('../../../../config.json');
   const src = `https://www.twitch.tv/embed/${config.twitch_name}/chat?parent=www.example.com`;
   useEffect(() => {
-    setHidden(props.chat);
-  }, [props.chat]);
+    setHidden(chat);
+  }, [chat]);
 
   if (hidden === true) {
     return <div></div>;

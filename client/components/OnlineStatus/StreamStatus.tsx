@@ -7,9 +7,21 @@ import { Starting } from './Starting';
 
 import { buildFetchStatusThunk } from '../../store';
 
+type StreamStatusProps = {
+  status: string;
+  fetchStatus: any;
+};
+type StreamStatusState = {
+  status: string;
+  starting: boolean;
+};
+
 import './StreamStatus.css';
-export class DisconnectedStreamStatus extends Component {
-  constructor(props) {
+export class DisconnectedStreamStatus extends Component<
+  StreamStatusProps,
+  StreamStatusState
+> {
+  constructor(props: StreamStatusProps) {
     super(props);
     this.state = {
       status: props.status,

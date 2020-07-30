@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './OnlineSign.css';
-export const OnlineSign = (props) => {
+export const OnlineSign: React.FC = () => {
   return (
     <div className="logo">
       <b>
