@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
+type LibraryProps = {
+  library: string[];
+};
+
 import './Library.css';
-export const DisconnectedLibrary = (props) => {
+export const DisconnectedLibrary = (props: LibraryProps) => {
   const library = props.library;
   return (
     <div id="library">
@@ -26,7 +30,7 @@ export const DisconnectedLibrary = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   library: state.library,
 });
 

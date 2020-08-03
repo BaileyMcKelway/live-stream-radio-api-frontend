@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import Draggable from 'react-draggable';
 
+type VideoProps = {
+  video: boolean;
+};
+
 import './VideoPlayer.css';
-function VideoPlayer(props) {
+function VideoPlayer(props: VideoProps) {
   const [hidden, setHidden] = useState(!props.video);
   const config = require('../../../../config.json');
   const url = `https://www.twitch.tv/${config.twitch_name}`;

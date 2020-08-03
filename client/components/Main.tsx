@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import {
   buildFetchStatusThunk,
@@ -12,8 +12,19 @@ import { Library } from './StreamInfo/Library';
 import VideoPlayer from './Video/Chat/VideoPlayer.js';
 import { Chat } from './Video/Chat/Chat.js';
 
+type MainProps = {
+  fetchStatus: () => void;
+  fetchLibrary: () => void;
+  fetchConfig: () => void;
+};
+
+type MainState = {
+  video: Boolean;
+  chat: Boolean;
+};
+
 import './Main.css';
-export class DisconnectedMain extends Component {
+export class DisconnectedMain extends React.Component<MainProps, MainState> {
   constructor(props) {
     super(props);
     this.state = {

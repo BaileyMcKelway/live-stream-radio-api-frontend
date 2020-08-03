@@ -17,24 +17,24 @@ const GET_LIBRARY = 'GET_LIBRARY';
 const GET_CONFIG = 'GET_CONFIG';
 
 //ACTION CREATORS
-const setStatusActionCreator = (status) => ({
+const setStatusActionCreator = (status: string) => ({
   type: GET_STATUS,
   status,
 });
 
-const setLibraryActionCreator = (library) => ({
+const setLibraryActionCreator = (library: string[]) => ({
   type: GET_LIBRARY,
   library,
 });
 
-const setConfigActionCreator = (config) => ({
+const setConfigActionCreator = (config: {}) => ({
   type: GET_CONFIG,
   config,
 });
 
 //THUNKS
 export const buildFetchStatusThunk = () => {
-  return async (dispatch) => {
+  return async (dispatch: any) => {
     try {
       const { data } = await axios.get('/api');
       dispatch(setStatusActionCreator(data.isRunning));
@@ -45,7 +45,7 @@ export const buildFetchStatusThunk = () => {
 };
 
 export const buildFetchLibraryThunk = () => {
-  return async (dispatch) => {
+  return async (dispatch: any) => {
     try {
       const { data } = await axios.get('/api/library');
 
@@ -57,7 +57,7 @@ export const buildFetchLibraryThunk = () => {
 };
 
 export const buildFetchConfigThunk = () => {
-  return async (dispatch) => {
+  return async (dispatch: any) => {
     try {
       const { data } = await axios.get('/api/config');
       dispatch(setConfigActionCreator(data));
@@ -67,7 +67,7 @@ export const buildFetchConfigThunk = () => {
   };
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action: any) => {
   switch (action.type) {
     case GET_STATUS:
       return { ...state, status: action.status };

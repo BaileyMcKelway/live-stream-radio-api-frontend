@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Draggable from 'react-draggable';
 
+type ChatProps = {
+  chat: boolean;
+};
+
 import './Chat.css';
-export const Chat = (props) => {
+export const Chat = (props: ChatProps) => {
   const [hidden, setHidden] = useState(!props.chat);
   const config = require('../../../../config.json');
   const src = `https://www.twitch.tv/embed/${config.twitch_name}/chat?parent=www.example.com`;

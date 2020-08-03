@@ -25,9 +25,17 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.ts?$/,
+        use: [
+          {
+            loader: 'awesome-typescript-loader',
+          },
+        ],
+      },
     ],
   },
-  entry: './client/index.js',
+  entry: './client/index.ts',
   output: {
     path: path.join(__dirname, 'server/public'),
     filename: 'bundle.js',

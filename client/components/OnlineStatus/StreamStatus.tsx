@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { OnlineSign } from './OnlineSign';
@@ -7,8 +7,21 @@ import { Starting } from './Starting';
 
 import { buildFetchStatusThunk } from '../../store';
 
+type StreamStatusState = {
+  status: string;
+  starting: boolean;
+};
+
+type StreamStatusProps = {
+  fetchStatus: () => void;
+  status: string;
+};
+
 import './StreamStatus.css';
-export class DisconnectedStreamStatus extends Component {
+export class DisconnectedStreamStatus extends React.Component<
+  StreamStatusProps,
+  StreamStatusState
+> {
   constructor(props) {
     super(props);
     this.state = {
@@ -81,13 +94,13 @@ export class DisconnectedStreamStatus extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
     fetchStatus: () => dispatch(buildFetchStatusThunk()),
   };
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   status: state.status,
 });
 
