@@ -12,3 +12,9 @@
   justify-content: space-around;
   position: fixed;
 }
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+}

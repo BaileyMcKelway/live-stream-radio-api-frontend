@@ -22,6 +22,12 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.10.0",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router": "^5.1.8",
+    "@types/redux-logger": "^3.0.8",
+    "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -48,7 +54,9 @@
     "redux-thunk": "^2.3.0",
     "request": "^2.88.2",
     "sequelize": "^4.43.0",
+    "source-map-loader": "^1.0.1",
     "style-loader": "^0.23.1",
+    "typescript": "^3.9.7",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.11"
   },

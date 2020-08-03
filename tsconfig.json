@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./server/public",
+    "allowJs": true,
+    "target": "es5",
+    "jsx": "react"
+  },
+  "include": ["./client"]
+}
