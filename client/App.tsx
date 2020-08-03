@@ -7,7 +7,7 @@ import { Main } from './components/Main';
 import { store } from './store';
 
 import './App.css';
-const App = () => {
+export const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
@@ -19,5 +19,3 @@ const App = () => {
     </Provider>
   );
 };
-
-export default App;

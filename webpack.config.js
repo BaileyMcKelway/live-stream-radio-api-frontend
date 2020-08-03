@@ -26,7 +26,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.ts?$/,
+        test: /\.tsx?$/,
         use: [
           {
             loader: 'awesome-typescript-loader',
@@ -35,7 +35,10 @@ module.exports = {
       },
     ],
   },
-  entry: './client/index.ts',
+  entry: './client/index.tsx',
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   output: {
     path: path.join(__dirname, 'server/public'),
     filename: 'bundle.js',

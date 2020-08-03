@@ -5,5 +5,5 @@
     "target": "es5",
     "jsx": "react"
   },
-  "include": ["./client/**/*"]
+  "include": ["./client"]
 }
