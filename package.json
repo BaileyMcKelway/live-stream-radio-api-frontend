@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.10.0",
+    "@material-ui/core": "^4.11.0",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
@@ -39,6 +39,7 @@
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
+    "path": "^0.12.7",
     "pg": "^7.8.2",
     "react": "^16.8.3",
     "react-background-animation": "^1.0.1",

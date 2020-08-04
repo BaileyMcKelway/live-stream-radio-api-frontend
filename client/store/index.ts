@@ -5,12 +5,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import axios from 'axios';
 
-interface State {
-  status: string;
-  library: string[];
-  config: {};
-}
-
 export const initialState = {
   status: '',
   library: [],

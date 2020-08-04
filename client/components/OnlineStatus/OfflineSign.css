@@ -7,20 +7,20 @@ body {
 .logoOffLine b {
   width: 100%;
   height: 100%;
-  font: 400 7vh 'Vibur';
+  font: 110.04px 'Vibur';
   color: #fee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #4466ff, 0 0 0.5em #4466ff,
     0 0 0.1em #4466ff, 0 10px 3px #000;
 }
 
 .logoOffLine b span {
-  font: 400 7vh 'Vibur';
+  font: 400 110.04px 'Vibur';
   color: #fee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #4466ff, 0 0 0.5em #4466ff,
     0 0 0.1em #4466ff, 0 10px 3px #000;
 }
 .logoOffLine b span:nth-of-type(2) {
-  font: 400 7vh 'Vibur';
+  font: 400 110.04px 'Vibur';
   color: #fee;
   text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #4466ff, 0 0 0.5em #4466ff,
     0 0 0.1em #4466ff, 0 10px 3px #000;

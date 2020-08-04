@@ -3,7 +3,9 @@
     "outDir": "./server/public",
     "allowJs": true,
     "target": "es5",
-    "jsx": "react"
+    "module": "es6",
+    "jsx": "react",
+    "moduleResolution": "node"
   },
-  "include": ["./client"]
+  "include": ["./client/**/*.tsx"]
 }
