@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
 type LibraryProps = {
@@ -6,7 +6,8 @@ type LibraryProps = {
 };
 
 import './Library.css';
-export const DisconnectedLibrary: React.FC<LibraryProps> = ({ library }) => {
+export const DisconnectedLibrary = (props: LibraryProps) => {
+  const library = props.library;
   return (
     <div id="library">
       {library.length <= 0 ? (
@@ -29,7 +30,7 @@ export const DisconnectedLibrary: React.FC<LibraryProps> = ({ library }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   library: state.library,
 });
 

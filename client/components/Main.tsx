@@ -1,4 +1,5 @@
-import React, { Component, ChangeEvent } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import {
   buildFetchStatusThunk,
@@ -9,53 +10,48 @@ import {
 import { StreamStatus } from './OnlineStatus/StreamStatus';
 import { StreamInformation } from './StreamInfo/StreamInformation';
 import { Library } from './StreamInfo/Library';
-import VideoPlayer from './Video/Chat/VideoPlayer.jsx';
-import { Chat } from './Video/Chat/Chat.jsx';
+import VideoPlayer from './Video/Chat/VideoPlayer';
+import { Chat } from './Video/Chat/Chat';
+
+type MainProps = {
+  fetchStatus: () => void;
+  fetchLibrary: () => void;
+  fetchConfig: () => void;
+};
 
 type MainState = {
   video: boolean;
   chat: boolean;
 };
 
-type MainProps = {
-  fetchStatus: any;
-  fetchLibrary: any;
-  fetchConfig: any;
-};
-
 import './Main.css';
-export class DisconnectedMain extends Component<MainProps, MainState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      video: true,
-      chat: true,
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-  componentDidMount() {
-    this.props.fetchStatus();
-    this.props.fetchLibrary();
-    this.props.fetchConfig();
-  }
-  handleChange(event: any) {
-    this.setState({ [event.target.name]: event.target.value });
-  }
-  render() {
-    return (
-      <div id="main">
-        <div id="top">
-          <StreamStatus />
-          <StreamInformation />
-        </div>
+export function DisconnectedMain(props: MainProps) {
+  const [video, setVideo] = useState(true);
+  const [chat, setChat] = useState(true);
+
+  useEffect(() => {
+    props.fetchStatus();
+    props.fetchLibrary();
+    props.fetchConfig();
+  }, []);
+
+  return (
+    <div id="main">
+      <div id="top">
+        <StreamStatus />
+        <StreamInformation />
+      </div>
+      <div className="checkboxes">
         <label className="container">
           Video
           <input
             type="checkbox"
             name="video"
-            onClick={() => this.setState({ video: !this.state.video })}
-          ></input>
-          <span className="checkmark"></span>
+            onClick={() => {
+              setVideo(!video);
+            }}
+          />
+          <span className="checkmark" />
         </label>
 
         <label className="container">
@@ -63,24 +59,25 @@ export class DisconnectedMain extends Component<MainProps, MainState> {
           <input
             type="checkbox"
             name="chat"
-            onClick={() => this.setState({ chat: !this.state.chat })}
-          ></input>
-          <span className="checkmark"></span>
+            onClick={() => {
+              setChat(!chat);
+            }}
+          />
+          <span className="checkmark" />
         </label>
-
-        <div id="middle">
-          <VideoPlayer video={this.state.video} />
-          <Chat chat={this.state.chat} />
-        </div>
-        <div id="bottom">
-          <Library />
-        </div>
       </div>
-    );
-  }
+      <div id="middle">
+        <VideoPlayer video={video} />
+        <Chat chat={chat} />
+      </div>
+      <div id="bottom">
+        <Library />
+      </div>
+    </div>
+  );
 }
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: any) => ({
   fetchStatus: () => dispatch(buildFetchStatusThunk()),
   fetchLibrary: () => dispatch(buildFetchLibraryThunk()),
   fetchConfig: () => dispatch(buildFetchConfigThunk()),

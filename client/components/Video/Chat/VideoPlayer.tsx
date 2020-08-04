@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import Draggable from 'react-draggable';
 
-type VideoPlayerProps = {
+type VideoProps = {
   video: boolean;
 };
 
 import './VideoPlayer.css';
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ video }) => {
-  const [hidden, setHidden] = useState(!video);
+function VideoPlayer(props: VideoProps) {
+  const [hidden, setHidden] = useState(!props.video);
   const config = require('../../../../config.json');
   const url = `https://www.twitch.tv/${config.twitch_name}`;
   useEffect(() => {
-    setHidden(video);
-  }, [video]);
+    setHidden(props.video);
+  }, [props.video]);
 
   if (hidden === true) {
     return <div></div>;

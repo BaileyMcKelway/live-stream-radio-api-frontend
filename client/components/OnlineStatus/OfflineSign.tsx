@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 
 import './OfflineSign.css';
-export const OfflineSign: React.FC = () => {
+export const OfflineSign = () => {
   return (
     <div className="logoOffLine">
       <b>

@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 
 import './Starting.css';
-export const Starting: React.FC = () => {
+export const Starting = () => {
   return (
     <div className="logoStarting">
       <b>

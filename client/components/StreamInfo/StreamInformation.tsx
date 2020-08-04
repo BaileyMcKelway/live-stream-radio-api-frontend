@@ -1,14 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
-type StreamInformationProps = {
-  config: any;
+type config = {
+  video_width: string;
+  video_height: string;
+  video_fps: string;
+  video_bit_rate: string;
+  audio_bit_rate: string;
+};
+
+type StreamInformation = {
+  config: {
+    [key: string]: config;
+  };
 };
 
 import './StreamInformation.css';
-export const DisconnectedStreamInformation: React.FC<StreamInformationProps> = ({
-  config,
-}) => {
+export const DisconnectedStreamInformation = (props: StreamInformation) => {
+  const config = props.config;
   return (
     <div id="stream_information">
       <div className="box">
@@ -42,7 +51,7 @@ export const DisconnectedStreamInformation: React.FC<StreamInformationProps> = (
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
   config: state.config,
 });
 
